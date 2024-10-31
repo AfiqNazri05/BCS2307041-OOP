@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to Eat Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff6f61;
+            padding: 1em 2em;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h2 {
+            margin-left: 1em;
+            font-size: 1.8em;
+        }
+
+        /* Navigation Links */
+        .menu-list {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+            margin-right: 1em;
+        }
+
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-link:hover {
+            background-color: #ff8a75;
+        }
+
+        /* Main Content Styling */
+        h1 {
+            font-size: 2.5em;
+            margin: 1.5em 0 0.5em 1.5em;
+            color: #ff6f61;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin: 1em 1.5em;
+            color: #333;
+        }
+
+        p {
+            margin: 0.5em 1.5em;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        /* Featured Menu Styling */
+        .featured-menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+            margin-top: 1em;
+        }
+
+        .featured-menu {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 1em;
+            width: 180px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .featured-menu img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            color: #ff6f61;
+            margin: 0.5em 0;
+        }
+
+        /* General Layout */
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 1em;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .copyright {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        footer h5 {
+            font-size: 0.9em;
+            color: white;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        footer h5#copytitle {
+            font-size: 0.8em;
+            color: #ffe6e1;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <h2>💖 What to Eat Meal Finder 💖</h2>
+            <ul class="menu-list">
+                <li><a class="menu-link" href="finalproject.html">What to Eat?</a></li>
+                <li><a class="menu-link" href="mealplanner.html">Meal Planner</a></li>
+                <li><a class="menu-link" href="grocerieslist.html">Grocery List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Welcome to What to Eat! Your Helpful Meal Finder</h1>
+        <h3>About What to Eat?</h3>
+        <p>What to Eat Meal Planner Website is a meal planner website that helps you to find suitable and ideal menu suggestions for you.</p>
+        <p>Our website recommends what menu options are ideal for you, your friends, or your family, helping you decide what to eat without spending too much time thinking.</p>
+        <p>Hope you enjoy finding delicious meals to eat today!</p>
+
+        <h3>Top Menu Featured Today by What to Eat!</h3>
+
+        <div class="featured-menu-container">
+            <div class="featured-menu">
+                <h3>BEEF</h3>
+                <img src="massaman curry.jpeg" alt="Massaman Beef Curry">
+                <h4>Massaman Beef Curry</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>CHICKEN</h3>
+                <img src="chicken basquiase.jpg" alt="Chicken Dish">
+                <h4>Chicken Basquiase</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>SEAFOOD</h3>
+                <img src="teriyaki salmon.jpg" alt="Seafood Dish">
+                <h4>Honey Teriyaki Salmon</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>LAMB</h3>
+                <img src="briyani.jpg" alt="Lamb Dish">
+                <h4>Lamb Briyani</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>PASTA</h3>
+                <img src="fredo.jpg" alt="Pasta Dish">
+                <h4>Fettuchini Alfredo</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>DESERT</h3>
+                <img src="desert.jpg" alt="Pasta Dish">
+                <h4>Chocolate Souffle</h4>
+            </div>
+            <div class="featured-menu">
+                <h3>GOAT</h3>
+                <img src="goat.jpeg" alt="Pasta Dish">
+                <h4>Mbuzi Choma (Roasted Goat)</h4>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class = "copyright">
+            <h5 id  = "copytitle">Copyright 2024 What to Eat? All Right Reserved</h5>
+        </div>
+    </footer>
+</body>
+</html>

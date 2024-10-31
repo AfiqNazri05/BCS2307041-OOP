@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to Eat? Meal Planner</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #ff6f61;
+            padding: 1em;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .menu-list {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+        }
+
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-link:hover {
+            background-color: #ff8a75;
+        }
+
+        .menu-link.active {
+            background-color: #ff8a75;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 1em;
+            color: #555;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 0.5em;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 0.6em 1.2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff8a75;
+        }
+
+        .btn-default {
+            margin-right: 0.5em;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2em;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff8a75;
+            color: white;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+
+        footer h5 {
+            font-size: 0.9em;
+            color: white;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        footer h5#copytitle {
+            font-size: 0.8em;
+            color: #ffe6e1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <h2>💖What to Eat Meal Planner💖</h2>
+            <ul class="menu-list">
+                <li><a class="menu-link active" href="homepage.html">Hello There</a></li>
+                <li><a class="menu-link" href="finalproject.html">Search Ingredient</a></li>
+                <li><a class="menu-link" href="grocerieslist.html">Grocery List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-group">
+            <label>Enter Meal Name</label>
+            <textarea id="fileContents" class="form-control" rows="2"></textarea>
+        </div>
+        <label>Date to Cook:</label>
+        <input type="date" id="mealdate">
+        <div class="form-group">
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+        </div>
+        <div class="buttons">
+            <button class="btn-create" id="btnCreate">Add</button>
+            <button class="btn-update" id="btnUpdate">Update</button>
+            <button class="btn-delete" id="btnDelete">Delete</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Meal Name</th>
+                    <th>Date</th>
+                    <th>Meal Type</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+            <tbody id="mealList">
+                <!-- Planned meals will be displayed here -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <h5 id="copytitle">Copyright 2024 What to Eat? All Right Reserved</h5>
+        </div>
+    </footer>
+
+    <script src="mealplanner.js"></script>
+</body>
+</html>
